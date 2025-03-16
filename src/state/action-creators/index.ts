@@ -8,7 +8,11 @@ const searchRepositories = (term: string) => {
       type: ActionType.SEARCH_REPOSITORIES
     })
     try {
-
+      const { data } = await axios.get('https://registry.npmjs.org/-/v1/search', {
+        params: {
+          text: term
+        }
+      }) 
     } catch (err) {
       if (err instanceof Error) {
         dispatch({
