@@ -20,7 +20,7 @@ interface SearchRepositoriesSuccessAction  {
 
 interface SearchRepositoriesErrorAction  {
   type: 'search_repositories_error'
-  payload: string[]
+  payload: string
 }
 
 
