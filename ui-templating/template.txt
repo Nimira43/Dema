@@ -1,0 +1,76 @@
+<body>
+  <header class="header">
+    <h1>Déma</h1>
+  </header>
+  <main class="main">
+    <div class="search-bar">
+      <input type="text" placeholder="Search NPM packages..." />
+    </div>
+    <section class="results">
+      <!-- Grid of search results will go here -->
+    </section>
+  </main>
+</body>
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Fredericka+the+Great&display=swap');
+
+:root {
+  --primary: #006400;
+  --light: #fffcfa;
+  --dark: #111;
+  --black: #000;
+}
+
+body {
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  background-color: var(--dark);
+  color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Grid container for layout */
+.main {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width: 90%;
+  max-width: 1200px;
+  margin-top: 2rem;
+}
+
+/* Search bar styling */
+.search-bar {
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input {
+  width: 100%;
+  max-width: 600px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 2px solid var(--light);
+  border-radius: 4px;
+}
+
+/* Grid styling for search results */
+.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.results div {
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid var(--light);
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
