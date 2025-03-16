@@ -1,7 +1,7 @@
 interface RepositoriesState {
   loading: boolean
   error: string | null
-  data: 
+  data: string[] 
 }
 
 const reducer = (state, action) => {
