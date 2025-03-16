@@ -11,14 +11,9 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env', '@babel/preset-react'],
-          },
-        },
+        use: 'ts-loader',
       },
       {
         test: /\.css$/,
@@ -26,6 +21,10 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx'], // Add these extensions
+  },
+
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
