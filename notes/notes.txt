@@ -1,0 +1,4 @@
+Notes
+
+One minor improvement could be type safety for data.objects and result.package.name. Defining TypeScript interfaces for the API response structure would make the code even more robust and help catch potential issues during development
+
