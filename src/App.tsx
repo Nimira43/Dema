@@ -1,10 +1,16 @@
 import { Provider } from 'react-redux'
+import { store } from './state'
 
 function App() {
   return (
-    <div>
-      <h1 className='logo'>Déma</h1>
-    </div>
+    <Provider store={store}>
+      <div>
+        <h1>Dema</h1>
+        <hr />
+        <h4>Search for a NPM Package:</h4>
+        <RepositoriesList />
+      </div>
+    </Provider>
   )
 }
 
