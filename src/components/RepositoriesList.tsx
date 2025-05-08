@@ -1,11 +1,16 @@
 import React from 'react'
 
-function RepositoriesList() {
+const RepositoriesList = () => {
   return (
     <div>
-      <h1>Respositories List</h1>
+      <form>
+          <input />
+          <button>Search</button>
+        </form>
     </div>
   )
 }
 
 export default RepositoriesList
+
+
