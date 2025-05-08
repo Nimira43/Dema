@@ -1,5 +1,6 @@
 import { Provider } from 'react-redux'
 import { store } from './state'
+import RepositoriesList from './components/RepositoriesList'
 
 function App() {
   return (
