@@ -4,9 +4,13 @@ import { useState } from 'react'
 const RepositoriesList = () => {
   const [term, setTerm] = useState('')
 
+  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault()
+  }
+
   return (
     <div>
-      <form >
+      <form onSubmit={onSubmit}>
         <input
           value={term}
           onChange={e => setTerm(e.target.value)}
