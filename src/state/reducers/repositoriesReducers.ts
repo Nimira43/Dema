@@ -7,7 +7,7 @@ interface RepositoriesState {
   data: string[] 
 }
 
-const initialState = {
+const initialState: Readonly<RepositoriesState> = {
   loading: false,
   error: null,
   data: []
