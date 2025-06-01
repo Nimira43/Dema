@@ -6,8 +6,8 @@ import { useActions } from '../hooks/useActions'
 const RepositoriesList = () => {
   const [term, setTerm] = useState('')
   const { searchRepositories } = useActions()
-  const state = useSelector((state) => state)
-  console.log(state)
+  const {data, error, loading} = useSelector((state) => state.repositories)
+  
 
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
