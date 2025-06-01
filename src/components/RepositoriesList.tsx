@@ -5,9 +5,11 @@ import { actionCreators } from '../state'
 
 const RepositoriesList = () => {
   const [term, setTerm] = useState('')
+  const dispatch = useDispatch()
 
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
+    dispatch(actionCreators.searchRepositories(term) as any)
   }
 
   return (
