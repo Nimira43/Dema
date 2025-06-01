@@ -8,7 +8,6 @@ const RepositoriesList = () => {
   const { searchRepositories } = useActions()
   const {data, error, loading} = useTypedSelector((state) => state.repositories)
   
-
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     searchRepositories(term) as any
@@ -23,6 +22,7 @@ const RepositoriesList = () => {
         />
           <button>Search</button>
         </form>
+        {error && <h3>{error}</h3>}
     </div>
   )
 }
